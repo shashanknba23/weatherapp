@@ -19,7 +19,7 @@ gem 'uglifier', '>= 1.3.0'
 #pstgres gem
 gem 'pg'
 
-gem 'bootstrap', '~> 4.0.0'
+gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
 gem "font-awesome-rails"
 gem 'loading_screen', '~> 0.2.3'
