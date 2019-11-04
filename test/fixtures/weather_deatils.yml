@@ -1,0 +1,9 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_location_id: 1
+  weather_deatils_by_day: 
+
+two:
+  user_location_id: 1
+  weather_deatils_by_day: 

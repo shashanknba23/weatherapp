@@ -1,0 +1,61 @@
+<%= loading_screen %>
+<div class="">
+  <div class="container">
+    <h1>Today's Temprature For Current Location</h1>
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>DateTime</th>
+        <th>Day</th>
+        <th>City</th>
+        <th>Temp</th>
+        <th>Max Temp</th>
+        <th>Min Temp</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><%= @detail_weather_details.current_date%></td>
+        <td><%= @detail_weather_details.current_day%></td>
+        <td><%= @detail_weather_details.user_location.city%></td>
+        <td><%= @detail_weather_details.current_temp%></td>
+        <td><%= @detail_weather_details.current_temp_min%></td>
+        <td><%= @detail_weather_details.current_temp_max%></td>
+      </tr>
+    </tbody>
+  </table>
+    <p></p>
+  </div>
+</div>
+
+
+
+<div class="container">
+  <h2>Weather Prediction For Current Location</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>DateTime</th>
+        <th>Day</th>
+        <th>City</th>
+        <th>Temp</th>
+        <th>Max Temp</th>
+        <th>Min Temp</th>
+      </tr>
+    </thead>
+    <tbody>
+    	<% @detail_weather_details.weather_deatils_by_day.each do |k, v| %>
+	      <tr>
+	        <td><%= v["date_time"]%></td>
+	        <td><%= v["week_day"]%></td>
+	        <td><%= @detail_weather_details.user_location.city%></td>
+	        <td><%= v["temp"]%></td>
+	        <td><%= v["temp_min"]%></td>
+	        <td><%= v["temp_max"]%></td>
+	      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
